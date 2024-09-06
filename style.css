@@ -160,3 +160,70 @@ video{
     }
     
 }
+
+#about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#about-us img{
+    border-radius: 20px;
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    text-align: center;
+    width: 50%;
+}
+
+#about-us-in h3{
+    font-weight: 800;
+    font-size: 54px;
+    margin-bottom: 40px;
+}
+
+
+#about-us-in p{
+    font-size: 19px;
+    line-height: 26px;
+}
+
+#cards-container{
+    height: 60vh;
+    /* background-color: red; */
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: inherit;
+    position: inherit;
+}
+
+.cards{
+    height: 70%;
+    width: 22%;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    background-color: #95C11E;
+}
+
+#card1{
+    background-image: url("assets\card1.avif");
+}
+
+#card2{
+    background-image: url("assets\card2.webp");
+}
+
+#card3{
+    background-image: url("assets\card3.avif");
+}
