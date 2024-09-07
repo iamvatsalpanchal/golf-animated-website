@@ -102,3 +102,15 @@ gsap.from("#about-us img,#about-us-in", {
       scrub: 4,
     },
   });
+
+  gsap.from("#page4 h1", {
+    y: 50,
+    scrollTrigger: {
+      trigger: "#page4 h1",
+      scroller: "body",
+      // markers:true,
+      start: "top 75%",
+      end: "top 70%",
+      scrub: 3,
+    },
+  });
