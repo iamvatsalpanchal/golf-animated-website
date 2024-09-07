@@ -111,7 +111,7 @@ video{
 
 #page2{
     z-index: 10;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -202,9 +202,9 @@ video{
     display: flex;
     gap: 70px;
     align-items: center;
-    justify-content: space-evenly;
-    z-index: inherit;
-    position: inherit;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
 }
 
 .cards{
@@ -213,17 +213,77 @@ video{
     border-radius: 25px;
     background-position: center;
     background-size: cover;
-    background-color: #95C11E;
+    /* background-color: #95C11E; */
+    overflow: hidden;
+    transition: all ease 0.6s;
 }
 
 #card1{
-    background-image: url("assets\card1.avif");
+    background-image: url("https://plus.unsplash.com/premium_photo-1678957568466-64179297a2af?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 #card2{
-    background-image: url("assets\card2.webp");
+    background-image: url("https://images.unsplash.com/photo-1594950981383-6eb659d18fbf?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 #card3{
-    background-image: url("assets\card3.avif");
+    background-image: url("https://plus.unsplash.com/premium_photo-1661759013744-4754d402459d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+}
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+
+.cards:hover .overlay {
+    opacity: 1;
+}
+
+.cards:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+#green-div{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+
+}
+
+#green-div h4 {
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+  }
+  #green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+  }
