@@ -11,17 +11,24 @@ html,body{
     width: 100%;
 }
 
-#nav{
-    width: 100%;
-    height: 120px;
-    background-color: rgb(3, 147, 51);
-    display: flex;
-    padding: 0 150px;
-    gap: 50px;
-    position: fixed;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 99;
+
+*::selection {
+  background-color: #fff;
+  color: #95c11e;
+}
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #95c11e;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 #cursor{
@@ -31,6 +38,8 @@ html,body{
     background-color: #95C11E;
     position: fixed;
     z-index: 99;
+    transition: all linear 0.1s;
+
 }
 
 #cursor-blur{
@@ -41,6 +50,21 @@ html,body{
     position: fixed;
     filter: blur(50px);
     z-index: 9;
+    transition: all linear 0.4s;
+
+}
+
+#nav{
+  width: 100%;
+  height: 120px;
+  /* background-color: rgb(3, 147, 51); */
+  display: flex;
+  padding: 0 150px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 99;
 }
 
 #nav img{
@@ -48,8 +72,10 @@ html,body{
 }
 
 #nav h4{
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 500;
+    cursor: pointer;
+    font-size: 1.15vw;
 }
 
 video{
@@ -74,11 +100,12 @@ video{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    z-index: 10;
 }
 
 #page1 #arrow {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     background-color: transparent;
     border: 2px solid #95c11e;
     position: absolute;
@@ -89,15 +116,16 @@ video{
     justify-content: center;
     border-radius: 50%;
     transition: all ease 0.5s;
-  }
+}
 #page1 #arrow i {
     font-size: 50px;
     font-weight: 100;
-  }
-#page1 #arrow:hover {
+}
+#page1 #arrow:hover{
     scale: 0.4;
     background-color: #95c11e;
-  }
+}
+
 
 #page1 h1{
     font-size: 140px;
@@ -162,14 +190,15 @@ video{
     font-size: 120px;
     font-weight: 900;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
     transition: all linear 0.5s;
-    color: transparent;
-    -webkit-text-stroke: 2px #95C11E;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
 }
 
 #scroller h4:hover{
     color: #95C11E;
+    -webkit-text-stroke: 2px #95c11e;
 }
 
 @keyframes scroll {
@@ -188,8 +217,10 @@ video{
     /* background-color: red; */
     padding: 0 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -303,13 +334,13 @@ video{
     font-size: 27px;
     text-transform: uppercase;
   }
-  #green-div img {
+#green-div img {
     height: 100%;
     object-fit: cover;
     width: 14%;
-  }
+}
 
-  #page3{
+#page3{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -318,32 +349,32 @@ video{
     position: relative;
     background-color: #000;
 
-  }
+}
 
-  #page3 p{
+#page3 p{
     font-size: 32px;
     font-weight: 700;
     width: 60%;
     line-height: 45px;
     text-align: center;
-  }
+}
 
-  #page3 img{
+#page3 img{
     position: absolute;
     height: 65px;
-  }
+}
 
-  #page3 #colon1{
+#page3 #colon1{
     left: 20%;
     top: 20%;
-  }
+}
 
-  #page3 #colon2{
+#page3 #colon2{
     right: 20%;
     bottom: 20%;
-  }
+}
 
-  #page4 {
+#page4 {
     height: 30vh;
     width: 100%;
     display: flex;
@@ -351,16 +382,17 @@ video{
     justify-content: center;
     gap: 70px;
     position: relative;
-  }
-  .elem {
+}
+
+.elem {
     height: 70%;
     width: 26%;
     overflow: hidden;
     border-radius: 20px;
     position: relative;
-  }
+}
   
-  .elem h2 {
+.elem h2 {
     height: 100%;
     width: 100%;
     background-color: #95c11e;
@@ -374,82 +406,82 @@ video{
     position: absolute;
     z-index: 10;
   }
-  .elem img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: all ease 0.5s;
-    scale: 1.1;
-  }
-  .elem:hover h2 {
-    color: #fff;
-    background-color: transparent;
-  }
-  .elem:hover img {
-    scale: 1;
-  }
-  #page4 h1 {
-    font-size: 6.4vw;
-    position: absolute;
-    top: -15%;
-    font-weight: 900;
-    font-family: gilroy;
-    color: #000;
-    -webkit-text-stroke: 2px #fff;
-  }
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+}
+.elem:hover img {
+  scale: 1;
+}
+#page4 h1 {
+  font-size: 6.4vw;
+  position: absolute;
+  top: -15%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+}
 
-  #footer {
-    height: 40vh;
-    width: 100%;
-    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 6.5vw;
-    padding: 0 100px;
-  }
-  #footer > img {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    z-index: 0;
-  }
-  #f1 img {
-    height: 100px;
-  }
-  #f1,
-  #f2,
-  #f3,
-  #f4 {
-    width: fit-content;
-    position: relative;
-    z-index: 99;
-    /* background-color: red; */
-  }
-  #f2 h3 {
-    font-size: 1.6vw;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 900;
-    margin-bottom: 8px;
-  }
-  
-  #f3 h3 {
-    font-size: 1.6vw;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 800;
-    margin-bottom: 8px;
-  }
-  #f4 h4 {
-    font-size: 1vw;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 600;
-    line-height: 20px;
-    margin-bottom: 8px;
-  }
+#footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+#footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+#f1 img {
+  height: 100px;
+}
+#f1,
+#f2,
+#f3,
+#f4 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+  /* background-color: red; */
+}
+#f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+#f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+#f4 h4 {
+  font-size: 1vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
